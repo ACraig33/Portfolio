@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang= "en" dir="1tr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>My Portfolio</title>
+	<link rel="stylesheet" href="./CSS/home.css">
+	<script src="./JS/home.js"></script>
+    
+	
+</head>
+
+<body class="dark--mode">
+	
+	<header>
+      <img class="logo" src="./img/logo.png" alt="">
+	    	<div class="menu-btn"><img id="menu_img" src="./img/menu.png"></div>
+	        <div class="navigation">
+				<div class="navigation-items">
+					<a class="light-button"> <button class="light-mode"> Toggle Light Mode</button></a>
+					
+			    </div>
+				</div>
+	</header>
+	
+	
+	<section class="home">
+	<div class="body-wrapper">
+	 <div class="body--header">
+	   <h1> Welcome! </h1>
+	   <h2>My name is Adrian, </h2>
+	 </div>
+	 <div class="body-main-header">
+	 <div class="static-txt"> I'm a</div>
+	 <ul class="dynamic-txt">
+	  <li> <span>Front-End Developer.</span></li>
+	   <li> <span>Web Developer.</span></li>
+	    <li> <span>Back-End Developer.</span></li>
+	     <li> <span>Freelance Developer.</span></li>
+	 </ul>
+	 </div>
+	 <div class="body--main">
+	 <p>Im a Front-End Developer specializing in UI/UX Design and Development based out of Florida.  Throughout my professional 
+	 career ive gained hands-on experience
+	  in front-end development, and mobile development. Skilled in creating responsive and accessible web 
+	 interfaces, optimizing code, and collaborating with designers to bring functional and visually appealing user interfaces to life. Passionate about 
+	  cybersecurity and currently pursuing a earning a certification in CompTIA Security+.      (Expected April 2025)</p>
+	 </div>
+	</div>
+	<div class="right">
+	<div class="video--wrapper">
+	   <img src="./img/banner.png">
+	</div>
+	<div class="projects--wrapper">
+	<h3> Projects/ Links</h3>
+	<div class="links--wrapper">
+	 <a href="https://www.linkedin.com/in/adriancraighead/"> <button> LinkedIn</button></a>
+	 <a href="https://github.com/ACraig33/Fake-Travel/releases/tag/Fake_Agency"> <button> Travel Agency </button></a>
+	 </div>
+	 <div class="links--wrapper">
+	 <a href="https://www.linkedin.com/in/adriancraighead/"> <button> GitHub- Active Project</button></a>
+	 </div>
+	</div>
+	</div>
+	
+	<section class="about--me">
+	<div class="about--wrapper">
+	<h1> About Me </h1>
+	<div class="top--container">
+	<p>
+
+Hi there! I'm Adrian Craighead, a passionate web developer with a passion for creating clean, efficient, 
+and user-friendly websites. With a background in both front-end and back-end development,
+ I bring a full-stack approach to every project, ensuring seamless functionality and beautiful design.
+I specialize in HTML, CSS, JavaScript, and working with frameworks like React and Angular. Whether it's crafting 
+responsive designs or optimizing performance, I am dedicated to delivering top-notch solutions that meet both 
+client needs and user expectations. Beyond coding, I enjoy nature, animals, and also enjoy pursuing physical fitness.
+
+</p>
+	</div>
+	</div>
+	</div>
+	</section>
+	
+	</section>
+	
+	
+	
+</body>
+<script>
+	  const menuBtn= document.querySelector(".menu-btn");
+	  const navigation= document.querySelector(".navigation");
+      const myImg= document.getElementById("menu_img");
+      const themeToggle= document.querySelector(".light-button");
+      const body= document.body;
+      
+      
+      
+      	     menuBtn.addEventListener("click",()=>{
+		 menuBtn.classList.toggle("active");
+		 navigation.classList.toggle("active");
+			  });
+         
+         
+         let isFirstImage= true;
+         
+         menuBtn.addEventListener("click",function(){
+         
+         if (isFirstImage){
+          myImg.src="./img/close_menu.png";
+         } else {
+          myImg.src="./img/menu.png";
+         }
+         
+          isFirstImage = !isFirstImage;
+          });
+          
+          
+          
+                themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light--mode');
+      navigation.classList.toggle('light--mode');
+      header.classList.toggle('light--mode');
+      });
+	
+		
+	</script>
+	 
+</html>
